@@ -1,13 +1,13 @@
 {
   "name": "lint-formatter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Linting formatter with support for multiple linters",
   "main": "index.js",
   "repository": "https://gitlab.com/cascornelissen/lint-formatter",
   "author": {
-      "name": "Cas Cornelissen",
-      "email": "cas.cornelissen@onefinity.io",
-      "url": "https://www.onefinity.io/"
+    "name": "Cas Cornelissen",
+    "email": "cas.cornelissen@onefinity.io",
+    "url": "https://www.onefinity.io/"
   },
   "license": "MIT",
   "dependencies": {
