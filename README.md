@@ -1,18 +1,18 @@
-# Webpack Lint Formatter
-Formatter for [Webpack][webpack] linter output with support for [multiple linters](#support). Format all your different linter outputs in the same consistent way to improve readability and findability.
+# Lint Formatter
+Formatter for linter output with support for [multiple linters](#support). Format all your different linter outputs in the same consistent way to improve readability and findability.
 
 ## Installation
 Install the module via [Yarn][yarn]/[NPM][npm]:
 
 ```bash
 # Yarn
-yarn add --dev webpack-lint-formatter
+yarn add --dev lint-formatter
 
 # NPM
-npm install --save-dev webpack-lint-formatter
+npm install --save-dev lint-formatter
 ```
 
-Supply the correct function to the linter in your `webpack.config.js`, see the [support table](#support) for links to documentation for specific loaders and plugins.
+Supply the correct function to the linter, see the [support table](#support) for links to documentation for specific loaders and plugins.
 
 ## Support <a name="support"></a>
 The following linters are supported. Feel free to submit a PR if you have fixes or want to add support for another linter.
@@ -23,7 +23,6 @@ Linter                 | Exported key | Documentation
 [Stylelint](stylelint) | `.stylelint` | [`stylelint-webpack-plugin`][formatter-stylelint-webpack-plugin], [`stylelint-bare-webpack-plugin`][formatter-stylelint-bare-webpack-plugin]
 
 
-[webpack]: https://webpack.js.org/
 [yarn]: https://yarnpkg.com/
 [npm]: http://npmjs.com/
 [eslint]: http://eslint.org/

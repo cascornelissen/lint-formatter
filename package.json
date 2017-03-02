@@ -1,9 +1,9 @@
 {
-  "name": "webpack-lint-formatter",
-  "version": "1.0.0",
-  "description": "Linting formatter for Webpack with support for multiple linters",
+  "name": "lint-formatter",
+  "version": "0.0.0",
+  "description": "Linting formatter with support for multiple linters",
   "main": "index.js",
-  "repository": "https://gitlab.com/cascornelissen/webpack-lint-formatter",
+  "repository": "https://gitlab.com/cascornelissen/lint-formatter",
   "author": {
       "name": "Cas Cornelissen",
       "email": "cas.cornelissen@onefinity.io",
