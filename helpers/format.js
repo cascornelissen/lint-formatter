@@ -62,7 +62,7 @@ module.exports = function(obj, notifications, linter) {
     var stdOutColumns = process.stdout.columns || 80;
 
     // Calculate max-width of a description (based on the width of the console, the width of other columns, and the gutter)
-    var descriptionMaxLength = stdOutColumns - columns.position - columns.severity - columns.rule - (Object.keys(columns).length + 1);
+    var descriptionMaxLength = Math.max(0, stdOutColumns - columns.position - columns.severity - columns.rule - (Object.keys(columns).length + 1));
     if ( !descriptionMaxLength || isNaN(descriptionMaxLength) ) {
         descriptionMaxLength = 80;
     }
