@@ -1,6 +1,6 @@
 {
     "name": "lint-formatter",
-    "version": "1.0.2",
+    "version": "2.0.0",
     "description": "Linting formatter with support for multiple linters",
     "main": "index.js",
     "repository": "https://www.github.com/cascornelissen/lint-formatter",
