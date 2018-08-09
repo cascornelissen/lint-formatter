@@ -1,17 +1,16 @@
-var pluralize = require('pluralize');
+const pluralize = require('pluralize');
+const format = require('../helpers/format');
+const { labels } = require('../helpers/constants');
 
-var format = require('../helpers/format'),
-    labels = require('../helpers/constants').labels;
-
-module.exports = function(files) {
-    var notifications = [];
-    var messages = {
+module.exports = (files) => {
+    const notifications = [];
+    const messages = {
         files: {}
     };
     messages[labels.ERRORS] = 0;
     messages[labels.WARNINGS] = 0;
 
-    files.forEach(function(file) {
+    files.forEach((file) => {
         if ( file.warnings.length ) {
             messages.files[file.source] = {
                 messages: []
@@ -36,22 +35,17 @@ module.exports = function(files) {
         }
 
         if ( file.deprecations.length ) {
-            notifications = notifications.concat(file.deprecations.map(function(deprecation) {
-                return deprecation.text + ' (' + deprecation.reference + ')';
+            notifications.push(...file.deprecations.map((deprecation) => {
+                return `${deprecation.text} (${deprecation.reference})`;
             }));
         }
 
         if ( file.invalidOptionWarnings.length ) {
-            notifications = notifications.concat(file.invalidOptionWarnings.map(function(invalidOptionWarning) {
+            notifications.push(...file.invalidOptionWarnings.map((invalidOptionWarning) => {
                 return invalidOptionWarning.text;
             }));
         }
     });
 
-    // Remove duplicates from notifications
-    notifications = notifications.filter(function(item, pos, self) {
-        return self.indexOf(item) == pos;
-    });
-
-    return format(messages, notifications, 'stylelint');
+    return format(messages, notifications.filter((item, pos, self) => self.indexOf(item) === pos), 'stylelint');
 };

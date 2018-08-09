@@ -1,4 +1,4 @@
-var pluralize = require('pluralize');
+const pluralize = require('pluralize');
 
 const LABEL_ERROR = 'error';
 const LABEL_WARNING = 'warning';

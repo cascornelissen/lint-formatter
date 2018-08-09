@@ -2,12 +2,9 @@
 Formatter for linter output with support for [multiple linters](#support). Format all your different linter outputs in the same consistent way to improve readability and findability.
 
 ## Installation
-Install the module via [Yarn][yarn]/[NPM][npm]:
+Install the package via [npm][npm]:
 
 ```bash
-# Yarn
-yarn add --dev lint-formatter
-
 # NPM
 npm install --save-dev lint-formatter
 ```
@@ -19,11 +16,10 @@ The following linters are supported. Feel free to submit a PR if you have fixes 
 
 Linter                 | Exported key | Documentation
 :--------------------- | :----------- | :-------------------
-[ESLint](eslint)       | `.eslint`	  | [`eslint-loader`][formatter-eslint-loader]
+[ESLint](eslint)       | `.eslint`    | [`eslint-loader`][formatter-eslint-loader]
 [Stylelint](stylelint) | `.stylelint` | [`stylelint-webpack-plugin`][formatter-stylelint-webpack-plugin], [`stylelint-bare-webpack-plugin`][formatter-stylelint-bare-webpack-plugin]
 
 
-[yarn]: https://yarnpkg.com/
 [npm]: http://npmjs.com/
 [eslint]: http://eslint.org/
 [stylelint]: https://stylelint.io/
